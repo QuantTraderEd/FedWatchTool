@@ -62,3 +62,16 @@ FOMC 타겟 레밸의 변화가 25b로 주어진다면 (주어진 타겟 레밸�
 |FFER.Start|(N/M) * [Implied Rate – FFER.End*((N-M)/N)]|(100 – FF.MonthBefore)|
 |Implied Rate|100 – FF.MeetingMonth|100 – FF.MeetingMonth|
 |FFER.End|100 – FF.MonthAfter|(N/(N-M)) * [Implied Rate – (M/N)*FFER.Start]|
+  
+FFQ5 = 99.8675 (FF 선물 15년 8월 물, FOMC 회의가 없는 월)  
+FFU5 = 99.805   (FF 선물 15년 9월 물, FOMC 회의가 있는 월)  
+N = 30  (9월달은 30일)  
+M = 14  (8월 31일 기준)  
+  
+FFER.Start = 0.1325 (100-99.8675)  
+ImpliedRate = 0.195 (100-99.805)  
+FFER.End = 30/14* [0.195 – (16/30)*0.1325]  
+                = 0.26643   
+  
+P(Hike) = (0.26643 – 0.1325) / 0.25 = 53.6%  
+P(NoHike) = 46.4%  
